@@ -26,7 +26,7 @@ namespace GymBooking15.Web.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<ApplicationUser> userManager,
+            UserManager<ApplicationUser> userManager,//can be injected in vanlih kontroller
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)

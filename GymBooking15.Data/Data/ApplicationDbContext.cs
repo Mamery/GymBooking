@@ -24,7 +24,7 @@ namespace GymBooking15.Data.Data
             base.OnModelCreating(builder);
             //fluent api
             builder.Entity<ApplicationUserGymClass>().HasKey(a => new { a.ApplicationUserId, a.GymClassId });
-            builder.Entity<GymClass>().HasQueryFilter(g => g.StartDate > DateTime.Now);
+          //  builder.Entity<GymClass>().HasQueryFilter(g => g.StartDate > DateTime.Now);
             //Go til homecontroller for att initiera applikationdbcontext
         }
     }
