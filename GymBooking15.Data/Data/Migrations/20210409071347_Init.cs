@@ -3,18 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GymBooking15.Data.Data.Migrations
 {
-    
     public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Discriminator",
-                table: "AspNetUsers",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "");
-
             migrationBuilder.CreateTable(
                 name: "GymClasses",
                 columns: table => new
@@ -68,10 +60,6 @@ namespace GymBooking15.Data.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "GymClasses");
-
-            migrationBuilder.DropColumn(
-                name: "Discriminator",
-                table: "AspNetUsers");
         }
     }
 }

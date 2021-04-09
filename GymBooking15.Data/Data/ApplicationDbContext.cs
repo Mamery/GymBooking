@@ -9,7 +9,7 @@ using System.Text;
 namespace GymBooking15.Data.Data
 {
     //
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser,IdentityRole,string>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
         //en tabell med många rader
         public DbSet<GymClass> GymClasses { get; set; }

@@ -1,4 +1,5 @@
-using GymBooking15.Web.Data;
+using GymBooking15.Core.Entities;
+using GymBooking15.Data.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,7 +33,7 @@ namespace GymBooking15.Web
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>() //fråga 10
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
